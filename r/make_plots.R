@@ -77,7 +77,7 @@ meps_clpse_year_ins <- meps_no_old %>%
 # label values
 meps_clpse_year_ins$inscov_label <- factor(
   meps_clpse_year_ins$inscov, 
-  labels=c('any private', 'public only', 'uninsured'))
+  labels=c('any private insurance', 'public insurance only', 'no insurance'))
 
 # plot burden over time and by insurance status
 ggplot(meps_clpse_year_ins, aes(x=year, y=hburden)) +
@@ -131,7 +131,7 @@ meps_clpse_year_race <- meps_no_old %>%
 # label values
 meps_clpse_year_race$race_label <- factor(
   meps_clpse_year_race$race, 
-  labels=c('white / hispanic', 'black', 'asian'))
+  labels=c('white', 'black', 'asian'))
 
 # plot burden over time and by race
 ggplot(meps_clpse_year_race, aes(x=year, y=hburden)) +
