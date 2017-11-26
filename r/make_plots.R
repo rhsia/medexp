@@ -38,7 +38,8 @@ ggplot(meps_clpse_year, aes(x=year, y=hburden)) +
   geom_line(alpha=0.6) +
   scale_x_continuous(breaks = c(1996, 2000, 2004, 2008, 2012, 2016)) +
   scale_y_continuous(limits=c(0,10)) 
-  
+ggsave("ui.png")
+
 # plot 2
 # burden by poverty status
 meps_clpse_year_pov <- meps_no_old %>%
@@ -62,6 +63,7 @@ ggplot(meps_clpse_year_pov, aes(x=year, y=hburden)) +
   scale_x_continuous(breaks = c(1996, 2000, 2004, 2008, 2012, 2016)) +
   scale_y_continuous(limits=c(0,25)) +
   theme(legend.position="bottom", legend.title=element_blank(), legend.text=element_text(size=9)) 
+ggsave("ui_pov.png")
 
 
 # plot 3
@@ -87,6 +89,7 @@ ggplot(meps_clpse_year_ins, aes(x=year, y=hburden)) +
   scale_x_continuous(breaks = c(1996, 2000, 2004, 2008, 2012, 2016)) +
   scale_y_continuous(limits=c(0,15.5)) +
   theme(legend.position="bottom", legend.title=element_blank(), legend.text=element_text(size=9))
+ggsave("ui_ins.png")
 
 
 # plot 4
@@ -113,6 +116,7 @@ ggplot(meps_clpse_year_age, aes(x=year, y=hburden)) +
   scale_x_continuous(breaks = c(1996, 2000, 2004, 2008, 2012, 2016)) +
   scale_y_continuous(limits=c(0,17)) +
   theme(legend.position="bottom", legend.title=element_blank(), legend.text=element_text(size=9)) 
+ggsave("ui_age.png")
 
 
 # plot 5
@@ -125,20 +129,22 @@ meps_clpse_year_race <- meps_no_old %>%
   filter(race==1 | race==2 | race==4)
 
 # label values
-meps_clpse_year_age$agecat_label <- factor(
-  meps_clpse_year_age$agecat, 
-  labels=c('white', 'black', 'asian'))
+meps_clpse_year_race$race_label <- factor(
+  meps_clpse_year_race$race, 
+  labels=c('white / hispanic', 'black', 'asian'))
 
 # plot burden over time and by race
 ggplot(meps_clpse_year_race, aes(x=year, y=hburden)) +
   xlab("") +
   ylab("Percent underinsured") +
   theme_minimal(base_size = 12, base_family = "Georgia") +
-  geom_point(alpha=0.6, aes(colour = factor(race))) +
-  geom_line(alpha=0.6, aes(colour = factor(race))) +
+  geom_point(alpha=0.6, aes(colour = factor(race_label))) +
+  geom_line(alpha=0.6, aes(colour = factor(race_label))) +
   scale_x_continuous(breaks = c(1996, 2000, 2004, 2008, 2012, 2016)) +
-  scale_y_continuous(limits=c(0,20)) +
+  scale_y_continuous(limits=c(0,12.5)) +
   theme(legend.position="bottom", legend.title=element_blank(), legend.text=element_text(size=9)) 
+ggsave("ui_race.png")
+
 
 # questions
 ## who are the gains/losses concentrated within?
