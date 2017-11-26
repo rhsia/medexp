@@ -34,7 +34,7 @@ Let's now look at underinsurance over time by income, race, age, and insurance c
 Some notes:
 - The post-2007 fall in underinsurance seems to be concentrated among folks who are poor, older, and publicly insured or uninsured.
 - The MEPS race variable doesn't have appear to have a "Hispanic" indicator. But they have an ethnicity variable that does, which I'll work on incorporating so that we can plot the trend for Hispanic individuals.
-- I need to look into the weird 2007 kink in the plot by age. Could definitely be a coding error.
+- I need to look into the weird 2007 kink in the plot by age. It's probably because of a coding error.
 
 Potential next steps (roughly ordered by priority):
 - Incorporate sample weights to make analysis representative of U.S. population
