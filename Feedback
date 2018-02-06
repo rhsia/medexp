@@ -1,0 +1,9 @@
+Really like what you've done so far; agree with the next steps (e.g., doing post-tax incomes and also using total burden as another potential outcome to see if results are different)
+You mentioned this already; but to be more specific, I think it would be worthwhile to pursue stratifications based on:
+  - chronic conditions such as cancer, diabetes, hypertension
+  - could also look at those who have had hospitalizations v. not (or could be broken down more broadly into those who have had any contact with the healthcare system v. not)
+My guess is one of the underlying reasons has been hesitance to seek care. This gets complicated because I think people are also getting sicker over time, so an increased rate of utilization of any healthcare resource (e.g., rate of ED visits, rate of hospitalizations, rate of primary care visits) could be increasing but still not capture the fact that patients are sicker, and I can't think of a great way to illustrate that (since doing counts of co-morbidity codes like Charlson or Elixhauser may not totally catch things). But I think it's worth exploring questions that MEPS might have about avoiding care, etc., and potentially superimposing that on the graph of decreased health care service burden or total burden. 
+Then if we find any signals, we can look at subgroups within those subgroups to see if we find anything interesting
+Whatever you find will be interesting since it doesn't look like much has been done on this recently
+Related to this, I just wanted to point you to a R grant that has been funded by NIMHD: https://projectreporter.nih.gov/project_info_description.cfm?aid=9232009&icde=37966430&ddparam=&ddvalue=&ddsub=&cr=166&csb=default&cs=ASC&pball=
+
